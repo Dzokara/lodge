@@ -1029,6 +1029,9 @@ a:focus {
 .author-text{
   color:#ebd548;
 }
+#hidden-text{
+  display:none;
+}
 @media only screen and (max-width: 300px) {
   .prev, .next {font-size: 11px}
 }

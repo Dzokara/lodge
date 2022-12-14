@@ -22,18 +22,18 @@ window.onload = function(){
         showButton=false;
       }
     });
-    var readMoreButton=document.getElementById("readMoreButton");
-    readMoreButton.addEventListener("click",function(){
-      if (document.getElementById("hidden-text").classList.contains("hide-row")) {
-        document.getElementById("hidden-text").classList.remove("hide-row");
-        readMoreButton.value="Read Less";
-      }
-      else
-      {
-        document.getElementById("hidden-text").classList.add("hide-row");
-        readMoreButton.value="Read More";
-      }
-    });
+    // var readMoreButton=document.getElementById("readMoreButton");
+    // readMoreButton.addEventListener("click",function(){
+    //   if (document.getElementById("hidden-text").classList.contains("hide-row")) {
+    //     document.getElementById("hidden-text").classList.remove("hide-row");
+    //     readMoreButton.value="Read Less";
+    //   }
+    //   else
+    //   {
+    //     document.getElementById("hidden-text").classList.add("hide-row");
+    //     readMoreButton.value="Read More";
+    //   }
+    // });
     var nextArrow=document.getElementsByClassName("next");
     var arrowSlideIndex=0;
     nextArrow[0].addEventListener("click",function(){
@@ -469,6 +469,16 @@ $(".container .price_container .box").click(function(){
       href: $(this).attr('src')
     });
   });
+});
+$("#readMoreButton").click(function(){
+  $("#hidden-text").slideToggle(500);
+  if($(this).val()=="Read More..."){
+    $(this).val("Read Less");
+  }
+  else{
+    $(this).val("Read More...");
+  }
+   
 });
 });
 
