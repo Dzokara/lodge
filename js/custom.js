@@ -277,14 +277,14 @@ function createForm() {
   var fullName = document.createElement("input");
   fullName.setAttribute("type", "text");
   fullName.setAttribute("id", "fullName");
-  fullName.setAttribute("placeholder", "Full Name");
+  fullName.setAttribute("placeholder", "Full Name : John Doe");
   var nameSpan=document.createElement("span");
   nameSpan.setAttribute("class","hide-row");
   nameSpan.innerHTML="Fullname contains letters and both name and surname start with an uppercase. Example : John Doe";
   var email = document.createElement("input");
   email.setAttribute("type", "text");
   email.setAttribute("id", "email");
-  email.setAttribute("placeholder", "E-Mail");
+  email.setAttribute("placeholder", "E-Mail : john@gmail.com");
   var emailSpan=document.createElement("span");
   emailSpan.setAttribute("class","hide-row");
   emailSpan.innerHTML="Email needs to contain '@' Example : john.doe@gmail.com";     
