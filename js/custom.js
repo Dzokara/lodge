@@ -169,8 +169,6 @@ window.onload = function(){
   //   }
   //   }
   // });
-
-
 // ----------------------functions----------------------
 
 var slideIndex = 0;
@@ -474,11 +472,6 @@ $(".container .price_container .box").click(function(){
 });
 });
 
-// document.querySelectorAll(".container .price_container .box").addEventListener("click",function() {
-//   console.log("!");
-//})
-
-    // console.log(document.querySelectorAll(".container .price_container .box"));
     
 
 
