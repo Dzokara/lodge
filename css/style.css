@@ -1019,6 +1019,12 @@ a:focus {
 .label-red{
   color:red;
 }
+#open-hours{
+  color:rgb(137, 221, 41);
+}
+.open-hours-closed{
+  color:rgb(170, 44, 44)!important;
+}
 #success{
   color:green!important;
 }

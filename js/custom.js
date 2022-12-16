@@ -1,5 +1,7 @@
 window.onload = function(){
     showSlides();
+    let workHours=[10,11,12,13,14,15,16,17,18];
+    openClosed(workHours);
     getYear();
     var hrefArray= ["#header_section","#about_section","#price_section","#contact_section","author.html"];
     var textArray=["Home","About","Jewellery","Contact Us","Author"]
@@ -97,80 +99,18 @@ window.onload = function(){
     });
 
   }
-  // var categoriesSelect=document.getElementById("selectCategories");
-  // categoriesSelect.addEventListener("change",function(){
-  //   let box=document.querySelectorAll("#price_section .price_container .box");
-  //   if(showButton){
-  //     if(categoriesSelect.value==0){
-  //       for (let index = 0; index < box.length; index++) {
-  //         box[index].classList.remove("hide-row");
-  //     }
-  //   }
-  //   else if (categoriesSelect.value==1) {
-  //     for (let index = 0; index < box.length; index++) {
-  //       if(jewelleryType[index]=="Ring")
-  //       box[index].classList.remove("hide-row");
-  //       else{
-  //         box[index].classList.add("hide-row");
-  //       }
-  //     }
-  //   }
-  //   else if(categoriesSelect.value==2){
-  //     for (let index = 0; index < box.length; index++) {
-  //       if(jewelleryType[index]=="Earrings")
-  //       box[index].classList.remove("hide-row");
-  //       else{
-  //         box[index].classList.add("hide-row");
-  //       }
-  //     }
-  //   }
-  //   else{
-  //     for (let index = 0; index < box.length; index++) {
-  //       if(jewelleryType[index]=="Bracelet")
-  //       box[index].classList.remove("hide-row");
-  //       else{
-  //         box[index].classList.add("hide-row");
-  //       }
-  //     }
-  //   }
-  //   }
-  //   else{
-  //     if(categoriesSelect.value==0){
-  //       for (let index = 0; index < box.length; index++) {
-  //         box[index].classList.remove("hide-row");
-  //     }
-  //   }
-  //   else if (categoriesSelect.value==1) {
-  //     for (let index = 0; index < box.length; index++) {
-  //       if(jewelleryType[index]=="Ring")
-  //       box[index].classList.remove("hide-row");
-  //       else{
-  //         box[index].classList.add("hide-row");
-  //       }
-  //     }
-  //   }
-  //   else if(categoriesSelect.value==2){
-  //     for (let index = 0; index < box.length; index++) {
-  //       if(jewelleryType[index]=="Earrings")
-  //       box[index].classList.remove("hide-row");
-  //       else{
-  //         box[index].classList.add("hide-row");
-  //       }
-  //     }
-  //   }
-  //   else{
-  //     for (let index = 0; index < box.length; index++) {
-  //       if(jewelleryType[index]=="Bracelet")
-  //       box[index].classList.remove("hide-row");
-  //       else{
-  //         box[index].classList.add("hide-row");
-  //       }
-  //     }
-  //   }
-  //   }
-  // });
-// ----------------------functions----------------------
 
+// ----------------------functions----------------------
+function openClosed(workHours){
+  let time=new Date();
+  let dayTmp=time.getDay();
+  let hourTmp=time.getHours();
+  let openHours=document.getElementById("open-hours");
+  if(!(dayTmp>=1 && dayTmp<=5 && workHours.includes(hourTmp)))
+  {
+    openHours.classList.add("open-hours-closed");
+  }
+}
 var slideIndex = 0;
 function showSlides() {
   let i;
